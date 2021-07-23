@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:login/screen/drawer.dart';
+// import 'package:login/screen/drawer.dart';
 void main()=> runApp(ShowList());
 
 class ShowList extends StatefulWidget {
@@ -31,7 +31,30 @@ class _ShowListState extends State<ShowList> {
               ],
               title: Text("Job Search",style: GoogleFonts.sourceSansPro(fontSize: 18,color: Colors.white),),
             ),
-            drawer: HeadApp(),
+            drawer: Drawer(
+              child: ListView(
+                children: [
+                  ListTile(
+                    title: Text("Home"),
+                    onTap: (){
+                      Navigator.pushNamed(context, '/second');
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Profile"),
+                    onTap: (){
+                      Navigator.pushNamed(context, '/profile');
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Logout"),
+                    onTap: (){
+                      Navigator.pushNamed(context, '/');
+                    },
+                  ),
+                ],
+              ),
+        ),         
             body: ListView.builder(
                   
                   itemCount: 15,

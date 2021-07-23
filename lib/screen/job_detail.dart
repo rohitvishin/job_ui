@@ -16,6 +16,37 @@ class _ShowListState extends State<ShowDetail> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+          appBar: AppBar(
+              backgroundColor: Colors.deepOrange,
+              actions: [
+                IconButton(onPressed: search, icon: Icon(Icons.search),)
+              ],
+              title: Text("Job Search",style: GoogleFonts.sourceSansPro(fontSize: 18,color: Colors.white),),
+            ),
+            drawer: Drawer(
+              child: ListView(
+                children: [
+                  ListTile(
+                    title: Text("Home"),
+                    onTap: (){
+                      Navigator.pushNamed(context, '/second');
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Profile"),
+                    onTap: (){
+                      Navigator.pushNamed(context, '/profile');
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Logout"),
+                    onTap: (){
+                      Navigator.pushNamed(context, '/');
+                    },
+                  ),
+                ],
+              ),
+        ),      
             body: SingleChildScrollView(
               child: Column(
                 
