@@ -31,6 +31,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^2.1.0
   simple_animations: ^3.1.1
+  flutter_native_splash: ^1.2.0
+
+flutter_native_splash:
+  color: '#F4F4F4'
+  android: true
+  image: image/darwinJob.png
+  ios: true 
   
 http: ^0.13.3
 dev_dependencies:

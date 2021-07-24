@@ -4,6 +4,7 @@ import 'package:login/screen/profile.dart';
 // import 'package:http/http.dart' as http;
 import 'package:login/screen/showlist.dart';
 import 'package:login/screen/job_detail.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 void main()=>runApp(
   MaterialApp(
     debugShowCheckedModeBanner: false,

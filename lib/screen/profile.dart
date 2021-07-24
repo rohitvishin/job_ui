@@ -53,8 +53,7 @@ class _ShowListState extends State<Profile> {
                 margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
                 child: Column(
                   children: [
-                    Container(
-                      
+                    Container(                      
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         mainAxisAlignment: MainAxisAlignment.center,  
@@ -62,7 +61,6 @@ class _ShowListState extends State<Profile> {
                           CircleAvatar(
                           backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/31363111?v=4'),
                           backgroundColor: Colors.brown.shade800,
-                          // child: const Text('Rohit'),
                           radius: 50,
                           ),
                           Icon(Icons.edit,size: 20,),
