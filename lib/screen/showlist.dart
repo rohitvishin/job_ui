@@ -37,7 +37,7 @@ class _ShowListState extends State<ShowList> {
                   ListTile(
                     title: Text("Home"),
                     onTap: (){
-                      Navigator.pushNamed(context, '/second');
+                      Navigator.pushNamed(context, '/showlist');
                     },
                   ),
                   ListTile(
@@ -170,6 +170,18 @@ class _ShowListState extends State<ShowList> {
                   );
                 }
                 ),
+                floatingActionButton: FloatingActionButton(
+                elevation: 50,
+                hoverColor: Colors.orangeAccent,
+                focusColor: Colors.orange[600],
+                backgroundColor: Colors.orange[600],
+                autofocus: true,
+                onPressed: () {
+                },
+                child: Icon(Icons.filter_alt,),
+                tooltip: 'Filter',
+              ),
+                floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
            ),
       ),
     );

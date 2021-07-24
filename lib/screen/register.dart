@@ -1,35 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:login/screen/register.dart';
-import 'package:login/screen/profile.dart';
 // import 'package:http/http.dart' as http;
-import 'package:login/screen/showlist.dart';
-import 'package:login/screen/job_detail.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
-void main()=>runApp(
-  MaterialApp(
-    debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => MyApp(),
-        '/job_detail': (context) => ShowDetail(),
-        '/profile': (context) => Profile(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
-        '/showlist': (context) => ShowList(),
-        '/register': (context) => Register(),
-      },
-  ),
-);
 
-class MyApp extends StatefulWidget {
-  const MyApp({ Key? key }) : super(key: key);
+class Register extends StatefulWidget {
+  const Register({ Key? key }) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<Register> {
   final bodyController = TextEditingController();
   final titleController = TextEditingController();
   
@@ -77,7 +57,7 @@ class _MyAppState extends State<MyApp> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("Login", style: GoogleFonts.sourceSansPro(fontSize: 40,color: Colors.white,fontWeight: FontWeight.bold),),
+                      Text("Register", style: GoogleFonts.sourceSansPro(fontSize: 40,color: Colors.white,fontWeight: FontWeight.bold),),
                       SizedBox(height: 10,),
                       Text("DarwinJobs", style: GoogleFonts.sourceSansPro(fontSize: 18,color: Colors.white),),
                     ],  
@@ -136,11 +116,23 @@ class _MyAppState extends State<MyApp> {
                                       ),
                                     ),
                                   ),
+                                  Container(
+                                    padding: EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                      border: Border(bottom: BorderSide(color: Colors.grey))
+                                    ),
+                                    child: TextField(
+                                      controller: bodyController,
+                                      decoration: InputDecoration(
+                                        hintText: "Confirm Password",
+                                        hintStyle: TextStyle(color: Colors.grey),
+                                        border: InputBorder.none
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
-                            SizedBox(height: 40,),
-                            Text("Forgot Password?", style: TextStyle(color: Colors.grey),),
                             SizedBox(height: 40,),
                             Container(
                               height: 50,
@@ -156,16 +148,17 @@ class _MyAppState extends State<MyApp> {
                                   backgroundColor: MaterialStateProperty.all<Color>(Colors.deepOrange),
                                 ),
                                 onPressed: postData,
-                                child: Text("Login", style: GoogleFonts.sourceSansPro(fontSize: 18,color: Colors.white,fontWeight: FontWeight.bold),),
+                                child: Text("Register", style: GoogleFonts.sourceSansPro(fontSize: 18,color: Colors.white,fontWeight: FontWeight.bold),),
                               ),
                             ),
                             SizedBox(height: 40,),
                             InkWell(
-                              child: Text("Click here, To create an account", style: TextStyle(color: Colors.blueAccent,decoration: TextDecoration.underline),),
+                              child: Text("Already registered ? Login", style: TextStyle(color: Colors.blueAccent,decoration: TextDecoration.underline),),
                               onTap: (){
-                                Navigator.pushNamed(context, '/register');
+                                Navigator.pushNamed(context, '/');
                               },
                             ),
+                            
                           ],
                         ),
                       ),

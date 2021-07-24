@@ -18,10 +18,7 @@ class _ShowListState extends State<ShowDetail> {
         child: Scaffold(
           appBar: AppBar(
               backgroundColor: Colors.deepOrange,
-              actions: [
-                IconButton(onPressed: search, icon: Icon(Icons.search),)
-              ],
-              title: Text("Job Search",style: GoogleFonts.sourceSansPro(fontSize: 18,color: Colors.white),),
+              title: Text("Job Details",style: GoogleFonts.sourceSansPro(fontSize: 18,color: Colors.white),),
             ),
             drawer: Drawer(
               child: ListView(
@@ -29,7 +26,7 @@ class _ShowListState extends State<ShowDetail> {
                   ListTile(
                     title: Text("Home"),
                     onTap: (){
-                      Navigator.pushNamed(context, '/second');
+                      Navigator.pushNamed(context, '/showlist');
                     },
                   ),
                   ListTile(

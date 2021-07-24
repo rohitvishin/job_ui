@@ -19,9 +19,7 @@ class _ShowListState extends State<Profile> {
         child: Scaffold(
             appBar: AppBar(
               backgroundColor: Colors.deepOrange,
-              actions: [
-                IconButton(onPressed: search, icon: Icon(Icons.search),)
-              ],
+              
               title: Text("Profile",style: GoogleFonts.sourceSansPro(fontSize: 18,color: Colors.white),),
             ),
             drawer: Drawer(
@@ -30,7 +28,7 @@ class _ShowListState extends State<Profile> {
                   ListTile(
                     title: Text("Home"),
                     onTap: (){
-                      Navigator.pushNamed(context, '/second');
+                      Navigator.pushNamed(context, '/showlist');
                     },
                   ),
                   ListTile(
