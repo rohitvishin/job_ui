@@ -14,7 +14,7 @@ class _MyAppState extends State<Register> {
   final titleController = TextEditingController();
   
   postData() async{
-    Navigator.pushNamed(context, '/showlist');
+    Navigator.pushNamed(context, '/search');
     // try{
     //     var response = await http.post(
     //     Uri.parse('https://darwindevs.com/flutter/login.php'),

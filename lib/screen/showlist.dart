@@ -37,7 +37,7 @@ class _ShowListState extends State<ShowList> {
                   ListTile(
                     title: Text("Home"),
                     onTap: (){
-                      Navigator.pushNamed(context, '/showlist');
+                      Navigator.pushNamed(context, '/search');
                     },
                   ),
                   ListTile(

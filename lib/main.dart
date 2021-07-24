@@ -5,7 +5,8 @@ import 'package:login/screen/profile.dart';
 // import 'package:http/http.dart' as http;
 import 'package:login/screen/showlist.dart';
 import 'package:login/screen/job_detail.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:login/screen/search.dart';
+
 void main()=>runApp(
   MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -13,6 +14,7 @@ void main()=>runApp(
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => MyApp(),
+        '/search': (context) => Search(),
         '/job_detail': (context) => ShowDetail(),
         '/profile': (context) => Profile(),
         // When navigating to the "/second" route, build the SecondScreen widget.
@@ -34,7 +36,7 @@ class _MyAppState extends State<MyApp> {
   final titleController = TextEditingController();
   
   postData() async{
-    Navigator.pushNamed(context, '/showlist');
+    Navigator.pushNamed(context, '/search');
     // try{
     //     var response = await http.post(
     //     Uri.parse('https://darwindevs.com/flutter/login.php'),

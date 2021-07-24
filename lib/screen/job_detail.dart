@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 void main()=> runApp(ShowDetail());
 
 class ShowDetail extends StatefulWidget {
@@ -26,7 +27,7 @@ class _ShowListState extends State<ShowDetail> {
                   ListTile(
                     title: Text("Home"),
                     onTap: (){
-                      Navigator.pushNamed(context, '/showlist');
+                      Navigator.pushNamed(context, '/search');
                     },
                   ),
                   ListTile(
