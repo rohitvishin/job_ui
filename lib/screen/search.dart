@@ -19,6 +19,9 @@ class _MyAppState extends State<Search> {
 
   @override
   Widget build(BuildContext context) {
+    void routing(){
+  Navigator.pushNamed(context, '/job_detail');
+  }
     return SafeArea(
       child: Scaffold(
                 appBar: AppBar(
@@ -54,7 +57,7 @@ class _MyAppState extends State<Search> {
                           padding: EdgeInsets.all(30),
                           child: Column(
                             children: <Widget>[
-                              SizedBox(height: 60,),
+                              SizedBox(height: 20,),
                               Container(
                                 decoration: BoxDecoration(
                                   color: Colors.white,
@@ -109,6 +112,118 @@ class _MyAppState extends State<Search> {
                                   onPressed: postData,
                                   child: 
                                   Text("Search Job", style: GoogleFonts.sourceSansPro(fontSize: 18,color: Colors.white,fontWeight: FontWeight.bold,),),
+                                ),
+                              ),
+                              SizedBox(height: 40,),
+                              Container(
+                                child: Text("Popular Jobs",style: GoogleFonts.sourceSansPro(fontSize: 18,color: Colors.deepOrange,fontWeight: FontWeight.bold,),),
+                              ),
+                              SizedBox(height: 20,),
+                              Container(      
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 1,
+                                    blurRadius: 1,
+                                    offset: Offset(0,1), // changes position of shadow
+                                  ),
+                                  ],
+                                  
+                                  ),
+                                  child: InkWell(
+                                    onTap: (){
+                                      routing();
+                                    },
+                                    child: Column(
+                                      children: [
+                                        Row(
+                                      children: [
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text("Designer Job",style: GoogleFonts.sourceSansPro(fontSize: 15,color: Colors.grey),),
+                                          ]
+                                        ),
+                                        SizedBox(width: 120,),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Icon(Icons.alarm,color: Colors.deepOrange,size: 12,),
+                                          ]
+                                        ),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.end,
+                                          children:
+                                          [
+                                            Text("20th August 2021",style: GoogleFonts.sourceSansPro(fontSize: 12,color: Colors.deepOrange),),
+                                          ]
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 6,),
+                                    Row(
+                                      children: [
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Icon(Icons.place,color: Colors.deepOrange,size: 12,),
+                                          ]
+                                        ),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text("Vagator, Goa",style: GoogleFonts.sourceSansPro(fontSize: 12,color: Colors.grey),),
+                                          ]
+                                        ),
+                                        SizedBox(width: 150,),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.end,
+                                          children:
+                                          [
+                                            Text("CV Sent",style: GoogleFonts.sourceSansPro(fontSize: 12,color: Colors.grey),),
+                                          ]
+                                        ),
+                                        SizedBox(width: 10,),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.end,
+                                          children:
+                                          [
+                                            Text("22",style: GoogleFonts.sourceSansPro(fontSize: 12,color: Colors.deepOrange),),
+                                          ]
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 6,),
+                                    Row(
+                                      children: [
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text("Apply",style: GoogleFonts.sourceSansPro(fontSize: 12,color: Colors.deepOrange),),
+                                          ]
+                                        ),
+                                        Column(
+                                          children: [
+                                            Icon(Icons.arrow_forward,color: Colors.deepOrange,size: 12,),
+                                          ]
+                                        ),
+                                        SizedBox(width: 230,),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.end,
+                                          children:
+                                          [
+                                            Icon(Icons.favorite_border,color: Colors.deepOrange,size: 14,),
+                                          ]
+                                        )
+                                      ],
+                                    ),
+                                      ],
+                                    ),
+                                  ),
+                                  
                                 ),
                               ),
                             ],

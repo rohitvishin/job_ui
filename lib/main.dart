@@ -36,22 +36,7 @@ class _MyAppState extends State<MyApp> {
   final titleController = TextEditingController();
   
   postData() async{
-    Navigator.pushNamed(context, '/search');
-    // try{
-    //     var response = await http.post(
-    //     Uri.parse('https://darwindevs.com/flutter/login.php'),
-    //     body: {
-    //     "title": titleController.text,
-    //     "body": bodyController.text,
-    //     "userId": 1.toString(),
-    //     } 
-    //   );
-    //   print(response.body);
-    //   Navigator.pushNamed(context, '/second');
-    // }catch(e){
-    //   print("failed");
-    // }
-    
+    Navigator.pushNamed(context, '/search');  
   }
 
 

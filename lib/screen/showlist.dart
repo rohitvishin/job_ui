@@ -12,7 +12,7 @@ class ShowList extends StatefulWidget {
 
 class _ShowListState extends State<ShowList> {
   void search(){
-
+    Navigator.pushNamed(context, '/search');
 }
   void routing(){
   Navigator.pushNamed(context, '/job_detail');
